@@ -1,0 +1,77 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: StudioForge.BlockWorld.QuadtreeBase`1
+// Assembly: StudioForge.BlockWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 25A385FE-38C2-4B34-AF3F-1EF2EFA4B0A9
+// Assembly location: D:\SteamLibrary\steamapps\common\Total Miner\StudioForge.BlockWorld.dll
+
+using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+
+namespace StudioForge.BlockWorld
+{
+  public abstract class QuadtreeBase<T>
+  {
+    public readonly BoundingBox Box;
+    public Quadtree<T> Parent;
+
+    public QuadtreeBase(Quadtree<T> parent, BoundingBox box)
+    {
+      this.Parent = parent;
+      this.Box = box;
+    }
+
+    public void Clear()
+    {
+      this.ClearCore();
+      this.Parent = (Quadtree<T>) null;
+    }
+
+    protected abstract void ClearCore();
+
+    public abstract bool IsLeaf { get; }
+
+    public virtual int LeafCount
+    {
+      get
+      {
+        return 0;
+      }
+    }
+
+    public virtual int MemorySize
+    {
+      get
+      {
+        return 28;
+      }
+    }
+
+    public abstract QuadtreeLeaf<T> AddObject(T o, BoundingBox box);
+
+    public int GetLeavesWithBoxInsideFrustum(
+      BoundingFrustum frustum,
+      List<QuadtreeLeaf<T>> list,
+      Vector3 offset)
+    {
+      return this.AddLeavesWithBoxInsideFrustrum(frustum, list, ref offset);
+    }
+
+    public int GetObjectsWithBoxInsideFrustum(
+      BoundingFrustum frustum,
+      List<T> list,
+      Vector3 offset)
+    {
+      return this.AddObjectsWithBoxInsideFrustrum(frustum, list, ref offset);
+    }
+
+    public abstract int AddLeavesWithBoxInsideFrustrum(
+      BoundingFrustum frustum,
+      List<QuadtreeLeaf<T>> list,
+      ref Vector3 offset);
+
+    public abstract int AddObjectsWithBoxInsideFrustrum(
+      BoundingFrustum frustum,
+      List<T> list,
+      ref Vector3 offset);
+  }
+}

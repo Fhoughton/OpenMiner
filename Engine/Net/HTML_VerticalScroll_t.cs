@@ -1,0 +1,18 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: StudioForge.Engine.Net.HTML_VerticalScroll_t
+// Assembly: StudioForge.Engine.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: DC512B22-6907-49CA-B98F-0785F8A4B040
+// Assembly location: D:\SteamLibrary\steamapps\common\Total Miner\StudioForge.Engine.Net.dll
+
+namespace StudioForge.Engine.Net
+{
+  public struct HTML_VerticalScroll_t
+  {
+    public uint unBrowserHandle;
+    public uint unScrollMax;
+    public uint unScrollCurrent;
+    public float flPageScale;
+    public bool bVisible;
+    public uint unPageSize;
+  }
+}

@@ -1,0 +1,66 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: StudioForge.TotalMiner.ScriptValueType
+// Assembly: StudioForge.TotalMiner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: D984B6D0-261B-49FC-9611-486D3599BC4D
+// Assembly location: D:\SteamLibrary\steamapps\common\Total Miner\StudioForge.TotalMiner.exe
+
+namespace StudioForge.TotalMiner
+{
+  internal enum ScriptValueType : byte
+  {
+    NumLiterial,
+    Variable,
+    HistoryKey,
+    SysHistoryKey,
+    ClanHistoryKey,
+    Random,
+    Skill,
+    SkillXP,
+    Health,
+    MaxHealth,
+    Reach,
+    PosX,
+    PosY,
+    PosZ,
+    EyeY,
+    VelX,
+    VelY,
+    VelZ,
+    ViewX,
+    ViewY,
+    ViewZ,
+    RelX,
+    RelY,
+    RelZ,
+    CRelX,
+    CRelY,
+    CRelZ,
+    PRelX,
+    PRelY,
+    PRelZ,
+    ScriptX,
+    ScriptY,
+    ScriptZ,
+    Abs,
+    Sin,
+    Cos,
+    Tan,
+    Sqrt,
+    Single,
+    Inv,
+    Distance,
+    Clock,
+    GamerCount,
+    NpcCount,
+    Pi,
+    Light,
+    Hash,
+    Int,
+    Neg,
+    BlockID,
+    Aux,
+    SunLight,
+    BlockLight,
+    zLast,
+  }
+}

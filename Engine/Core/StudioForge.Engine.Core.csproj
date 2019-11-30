@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\SteamLibrary\steamapps\common\Total Miner\StudioForge.Engine.Core.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{657A5331-0865-4D65-B1EA-0A5D658DBC7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>StudioForge.Engine.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>StudioForge.Engine.Core</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="StudioForge.Engine.Integration">
+      <HintPath>lib\StudioForge.Engine.Integration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Microsoft.Xna.Framework.Xact" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="System.Core" />
+    <Reference Include="StudioForge.Engine.Services">
+      <HintPath>lib\StudioForge.Engine.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NodeTree.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="ContentManager.cs" />
+    <Compile Include="IGameObject.cs" />
+    <Compile Include="GameObjectBase.cs" />
+    <Compile Include="IDrawableGameObject.cs" />
+    <Compile Include="DrawableGameObjectBase.cs" />
+    <Compile Include="AudioManagerXACT.cs" />
+    <Compile Include="PriorityQueue`2.cs" />
+    <Compile Include="Interpolator`1.cs" />
+    <Compile Include="FloatInterpolator.cs" />
+    <Compile Include="Vec2Interpolator.cs" />
+    <Compile Include="Vec3Interpolator.cs" />
+    <Compile Include="Vec4Interpolator.cs" />
+    <Compile Include="QuadTree`1.cs" />
+    <Compile Include="MyMathHelper.cs" />
+    <Compile Include="LocalSpace.cs" />
+    <Compile Include="Argument.cs" />
+    <Compile Include="IThreadWorkItem.cs" />
+    <Compile Include="ThreadedWorkerBase.cs" />
+    <Compile Include="ThreadedWorkerQueueQuery.cs" />
+    <Compile Include="ThreadedQueueWorker.cs" />
+    <Compile Include="Octree`1.cs" />
+    <Compile Include="RenderTargetBuilder.cs" />
+    <Compile Include="Pulsator.cs" />
+    <Compile Include="PoolBase`1.cs" />
+    <Compile Include="Pool`1.cs" />
+    <Compile Include="DictionaryWithKeyArray`2.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="DummyMessageDisplay.cs" />
+    <Compile Include="BadValueException.cs" />
+    <Compile Include="MyExtensions.cs" />
+    <Compile Include="InputState.cs" />
+    <Compile Include="APath`1.cs" />
+    <Compile Include="Intersection.cs" />
+    <Compile Include="AABBox.cs" />
+    <Compile Include="xxHash.cs" />
+    <Compile Include="PcgRandom.cs" />
+    <Compile Include="BWRandomOld.cs" />
+    <Compile Include="BWRandom.cs" />
+    <Compile Include="MyRandom.cs" />
+    <Compile Include="PriorityLevel.cs" />
+    <Compile Include="ThreadQueueManager.cs" />
+    <Compile Include="CustomArray`1.cs" />
+    <Compile Include="FileSystem.cs" />
+    <Compile Include="TitleFileSystem.cs" />
+    <Compile Include="FSM.cs" />
+    <Compile Include="WaypointSystem`1.cs" />
+    <Compile Include="Manager`1.cs" />
+    <Compile Include="InputManager.cs" />
+    <Compile Include="TypeLoader.cs" />
+    <Compile Include="PropertyToString`1.cs" />
+    <Compile Include="ThreadedGameObject.cs" />
+    <Compile Include="FrameRateCounter.cs" />
+    <Compile Include="Timer.cs" />
+    <Compile Include="TimedThreadWorkItem.cs" />
+    <Compile Include="ThreadQueue.cs" />
+    <Compile Include="PerlinNoise1.cs" />
+    <Compile Include="PerlinNoise2.cs" />
+    <Compile Include="SimplexNoise1.cs" />
+    <Compile Include="AudioManager.cs" />
+    <Compile Include="FastRandom.cs" />
+    <Compile Include="AStarPath.cs" />
+    <Compile Include="TextFileParser.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Microsoft\Xna\Framework.RuntimeProfile" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
